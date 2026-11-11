@@ -1,0 +1,7 @@
+spring:
+  application:
+    name: aquafiles-backend
+
+server:
+  # Usa la variable de entorno PORT; si no existe, usa 8080.
+  port: ${PORT:8080}
