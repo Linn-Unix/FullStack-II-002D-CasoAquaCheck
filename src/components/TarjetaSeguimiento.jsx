@@ -39,20 +39,22 @@ function TarjetaSeguimiento({ candidato }) {
         </p>
       )}
 
-      {/* 6. map() crea un paso por cada elemento de PASOS. */}
-      {PASOS.map((paso, indice) => {
-        const listo = indice <= pasoActual
-        const detalle = indice < pasoActual || terminado ? 'Completado' : indice === pasoActual ? 'En curso' : 'Pendiente'
-        return (
-          <div className={listo ? 'process-step done' : 'process-step'} key={paso}>
-            <span>{listo ? '✓' : indice + 1}</span>
-            <div>
-              <strong>{paso}</strong>
-              <small>{detalle}</small>
+{/* 6. map() crea un paso por cada elemento de PASOS. */}
+      <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(200px, 1fr))', gap: '15px', marginTop: '20px' }}>
+        {PASOS.map((paso, indice) => {
+          const listo = indice <= pasoActual
+          const detalle = indice < pasoActual || terminado ? 'Completado' : indice === pasoActual ? 'En curso' : 'Pendiente'
+          return (
+            <div className={listo ? 'process-step done m-0' : 'process-step m-0'} key={paso}>
+              <span>{listo ? '✓' : indice + 1}</span>
+              <div>
+                <strong>{paso}</strong>
+                <small>{detalle}</small>
+              </div>
             </div>
-          </div>
-        )
-      })}
+          )
+        })}
+      </div>
     </div>
   )
 }
