@@ -1293,12 +1293,16 @@ h2 {
   color: #b5c6cb; /* Mantenemos el encabezado sutil pero legible */
 }
 
-/* 2. Filas alternadas (Zebra striping) respetando la selección */
+/* --- MEJORA DE CONTRASTE MÁS EVIDENTE EN FILAS ALTERNADAS (Punto 2) --- */
+
+/* Modo claro: un tono azulado distinguible en las filas impares */
 .table tbody tr:nth-of-type(odd):not(.selected) td {
-  background-color: rgba(0, 91, 150, 0.03); /* Fondo sutil claro */
+  background-color: rgba(3, 169, 244, 0.12); 
 }
+
+/* Modo oscuro: un tono más contrastado y visible para las filas alternadas */
 .theme-dark .table tbody tr:nth-of-type(odd):not(.selected) td {
-  background-color: rgba(255, 255, 255, 0.04); /* Fondo sutil oscuro */
+  background-color: #34596b; /* Tono más claro y definido para el modo oscuro */
 }
 
 /* ---------- Corrección de contraste en lista del Dashboard (Modo Oscuro) ---------- */
