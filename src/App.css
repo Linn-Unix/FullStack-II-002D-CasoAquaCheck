@@ -1300,3 +1300,16 @@ h2 {
 .theme-dark .table tbody tr:nth-of-type(odd):not(.selected) td {
   background-color: rgba(255, 255, 255, 0.04); /* Fondo sutil oscuro */
 }
+
+/* ---------- Corrección de contraste en lista del Dashboard (Modo Oscuro) ---------- */
+.theme-dark .panel .list-group-item {
+  background-color: transparent !important;
+  color: var(--dark-text) !important; /* Texto claro legible */
+  border-color: var(--dark-line) !important;
+}
+
+.theme-dark .panel .list-group-item span.badge {
+  color: var(--dark-text) !important;
+  background-color: var(--dark-surface-alt) !important;
+  border: 1px solid var(--dark-line);
+}
