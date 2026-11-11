@@ -1282,3 +1282,21 @@ h2 {
   gap: 4px;
   text-align: left;
 }
+
+/* --- MEJORAS DE TABLA (Puntos 1 y 2) --- */
+
+/* 1. Contraste en modo oscuro para tablas */
+.theme-dark .table td {
+  color: #f8f9fa !important; /* Gris ultra claro para máxima legibilidad */
+}
+.theme-dark .table th {
+  color: #b5c6cb; /* Mantenemos el encabezado sutil pero legible */
+}
+
+/* 2. Filas alternadas (Zebra striping) respetando la selección */
+.table tbody tr:nth-of-type(odd):not(.selected) td {
+  background-color: rgba(0, 91, 150, 0.03); /* Fondo sutil claro */
+}
+.theme-dark .table tbody tr:nth-of-type(odd):not(.selected) td {
+  background-color: rgba(255, 255, 255, 0.04); /* Fondo sutil oscuro */
+}
